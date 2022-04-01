@@ -11,3 +11,4 @@
  */
 
 extern struct smp_operations msm8909_smp_ops;
+extern struct smp_operations arm_smp_ops;

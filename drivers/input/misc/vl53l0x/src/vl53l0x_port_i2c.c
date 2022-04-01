@@ -18,11 +18,11 @@
 
 #include <linux/i2c.h>
 #include <linux/module.h>
-#include "stmvl53l0x-i2c.h"
-#include "stmvl53l0x-cci.h"
+#include "../stmvl53l0x-i2c.h"
+#include "../stmvl53l0x-cci.h"
 #include "vl53l0x_platform.h"
 #include "vl53l0x_i2c_platform.h"
-#include "stmvl53l0x.h"
+#include "../stmvl53l0x.h"
 
 #define I2C_M_WR			0x00
 #define STATUS_OK			0x00

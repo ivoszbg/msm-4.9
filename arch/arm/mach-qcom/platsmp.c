@@ -417,6 +417,12 @@ static int msm8909_boot_secondary(unsigned int cpu, struct task_struct *idle)
 	return qcom_boot_secondary(cpu, arm_release_secondary);
 }
 
+static int arm_boot_secondary(unsigned int cpu, struct task_struct *idle)
+{
+	pr_debug("Starting secondary CPU %d\n", cpu);
+	return qcom_boot_secondary(cpu, arm_release_secondary);
+}
+
 static int msm8660_boot_secondary(unsigned int cpu, struct task_struct *idle)
 {
 	return qcom_boot_secondary(cpu, scss_release_secondary);
@@ -503,3 +509,16 @@ struct smp_operations msm8909_smp_ops __initdata = {
 };
 
 CPU_METHOD_OF_DECLARE(qcom_smp_8909, "qcom,apss-8909", &msm8909_smp_ops);
+
+struct smp_operations arm_smp_ops __initdata = {
+	.smp_init_cpus = arm_smp_init_cpus,
+	.smp_prepare_cpus = qcom_smp_prepare_cpus,
+	.smp_secondary_init = qcom_secondary_init,
+	.smp_boot_secondary = arm_boot_secondary,
+#ifdef CONFIG_HOTPLUG
+	.cpu_die = msm_cpu_die,
+	.cpu_kill = msm_cpu_kill,
+#endif
+};
+
+CPU_METHOD_OF_DECLARE(qcom_smp_arm, "qcom,arm-smp", &arm_smp_ops);

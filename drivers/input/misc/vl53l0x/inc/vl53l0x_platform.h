@@ -23,9 +23,9 @@
 #include "vl53l0x_def.h"
 #include "vl53l0x_platform_log.h"
 
-#include "stmvl53l0x-i2c.h"
-#include "stmvl53l0x-cci.h"
-#include "stmvl53l0x.h"
+#include "../stmvl53l0x-i2c.h"
+#include "../stmvl53l0x-cci.h"
+#include "../stmvl53l0x.h"
 
 /**
  * @file vl53l0x_platform.h
