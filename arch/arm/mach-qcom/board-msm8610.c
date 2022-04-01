@@ -16,6 +16,7 @@
 #include <asm/mach/arch.h>
 #include "board-dt.h"
 #include "platsmp.h"
+#include "clock.h"
 
 static const char *msm8610_dt_match[] __initconst = {
 	"qcom,msm8610",
@@ -26,6 +27,7 @@ static const char *msm8610_dt_match[] __initconst = {
 static void __init msm8610_init(void)
 {
 	board_dt_populate(NULL);
+	//msm_clock_init(&msm8610_clock_init_data);
 }
 
 DT_MACHINE_START(MSM8610_DT,

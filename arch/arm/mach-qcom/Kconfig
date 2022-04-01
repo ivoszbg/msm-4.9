@@ -137,7 +137,6 @@ config ARCH_MSM8610
 	select CLKDEV_LOOKUP
 	select HAVE_CLK
 	select HAVE_CLK_PREPARE
-	select COMMON_CLK_MSM
 
 config ARCH_MSM8917
 	bool "Enable support for MSM8917"
