@@ -23,6 +23,17 @@ dtb-$(CONFIG_ARCH_MDM9650) += mdm9650-nand-mtp.dtb \
 dtb-$(CONFIG_ARCH_MDM9607) += mdm9607-mtp.dtb \
 	mdm9607-ttp.dtb
 
+dtb-$(CONFIG_ARCH_MSM8610) += msm8610-rumi.dtb \
+	msm8610-v1-cdp.dtb \
+	msm8610-v2-cdp.dtb \
+	msm8610-v1-mtp.dtb \
+	msm8610-v2-mtp.dtb \
+	msm8610-sim.dtb \
+	msm8610-v1-qrd-skuaa.dtb \
+	msm8610-v1-qrd-skuab.dtb \
+	msm8610-v2-qrd-skuaa.dtb \
+	msm8610-v2-qrd-skuab.dtb
+
 targets += dtbs
 
 include $(srctree)/arch/arm64/boot/dts/qcom/Makefile

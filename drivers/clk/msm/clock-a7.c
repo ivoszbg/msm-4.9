@@ -475,6 +475,7 @@ static int clock_a7_probe(struct platform_device *pdev)
 
 static const struct of_device_id clock_a7_match_table[] = {
 	{.compatible = "qcom,clock-a53-8916"},
+	{.compatible = "qcom,clock-a7-8226"},
 	{.compatible = "qcom,clock-a7-9650"},
 	{.compatible = "qcom,clock-a7-mdm9607"},
 	{.compatible = "qcom,clock-a7-sdx20"},
